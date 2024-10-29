@@ -3,10 +3,13 @@ import calcPaginationData from '../utils/calcPaginationData.js'
 
 export const getAllSuperheroes = async ({ page, perPage }) => {
   const skipPage = (page - 1) * perPage
-  const request = Superhero.find()
 
-  const superheroes = await request.skip(skipPage).limit(perPage)
-  const totalItems = await Superhero.find().merge(request).countDocuments()
+  const totalItems = await Superhero.countDocuments()
+
+  const superheroes = await Superhero.find().skip(skipPage).limit(perPage)
+
+  console.log(totalItems)
+
   const { totalPages, hasNextPage, hasPreviousPage } = calcPaginationData({
     total: totalItems,
     page,
