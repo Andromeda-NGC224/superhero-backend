@@ -105,7 +105,7 @@ export const deleteSuperheroController = async (req, res) => {
   const { id } = req.params
   const superhero = await deleteSuperhero({ _id: id })
   if (!superhero) {
-    throw createHttpError(404, 'There is no such superhero, unfortunately')
+    throw createHttpError(404, 'There is no such superhero, unfortunately.')
   }
   res.status(200).json({
     status: res.statusCode,
