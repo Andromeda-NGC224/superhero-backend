@@ -6,9 +6,10 @@ export const getAllSuperheroes = async ({ page, perPage }) => {
 
   const totalItems = await Superhero.countDocuments()
 
-  const superheroes = await Superhero.find().skip(skipPage).limit(perPage)
-
-  console.log(totalItems)
+  const superheroes = await Superhero.find()
+    .sort({ createdAt: -1 })
+    .skip(skipPage)
+    .limit(perPage)
 
   const { totalPages, hasNextPage, hasPreviousPage } = calcPaginationData({
     total: totalItems,
