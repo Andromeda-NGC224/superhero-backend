@@ -4,7 +4,7 @@ Backend for the superhero database, which provides CRUD functionality for the su
 - Add, edit, delete and view superheroes.
 - Store and process images, display and manage information about heroes.
 
-## 💾 Модель супергероя:
+## 💾 Superhero Model:
 Each superhero contains the following fields:
 - **nickname:** the unique nickname of the hero (e.g. Superman)
 - **real_name:** real name (e.g. Clark Kent)
