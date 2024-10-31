@@ -29,7 +29,8 @@ Backend provides the ability to:
 ## 🚀 How to Run the Project:
 1. Clone the repository with the backend server.
 2. Install dependencies with the **npm install** command.
-3. Start the server with the **npm start** command.
+3. Query the data for the **.env** file using the **.env.example** to ensure the local server works correctly.
+4. Start the server with the **npm start** command.
    
 This will launch the project locally at http://localhost:3000.
 To make sure the server is running locally, follow this [link](http://localhost:3000) or you can go to the deployed server using the [link](https://superhero-backend-g2ow.onrender.com/). After launch, the status "Living" will be displayed, confirming a successful connection.
